@@ -7,3 +7,4 @@ Step 2 : Doing Django Eating Mango
 thank youssssss
 lets start
 its working
+same
