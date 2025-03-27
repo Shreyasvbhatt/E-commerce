@@ -1,2 +1,26 @@
-day1)
+Authentication - JWT Authentication
+Admin Page - Adharsh,bhatta
+User Registration - Unique emailid
+User Login - username,password
 
+
+Home page - Search Bar,Navigation Bar(Cart,Profile)
+Below - Product Page
+Product Page - Images, Description, Price, Add to cart
+
+Cart Page - User Selected Product(Images, Description, Price, Click to Proceed)
+
+Payment Page - ProductName, Image, Price, Tax, TotalAmount, Proceed to pay
+
+Must Use -
+1)Class
+2)Functions
+3)Serialization
+4)SwaggerUI
+5)Poetry
+
+Database - 
+1)User Table - UserID,Username,Email,Password,Phno
+2)Product Table - ProductId,ProductName,ProductPrice,ProductStock,ProductDiscription
+3)Order Table - OrderID,UserID,ProductId,ProductCount,TotalPrice,Status
+4)PaymentGetway - OrderID,UserID,ProductId,TotalPrice,Date,TransactionID
