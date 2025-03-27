@@ -24,3 +24,6 @@ Database -
 2)Product Table - ProductId,ProductName,ProductPrice,ProductStock,ProductDiscription
 3)Order Table - OrderID,UserID,ProductId,ProductCount,TotalPrice,Status
 4)PaymentGetway - OrderID,UserID,ProductId,TotalPrice,Date,TransactionID
+
+Shreyas- model.py
+adharsh-Database setup and connect
