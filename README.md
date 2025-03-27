@@ -1,3 +1,3 @@
 # E-commerce
 day 1 : model.py
-day2
+day2 : bhatta bhaata
