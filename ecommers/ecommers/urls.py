@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+from django.conf import settings  # Import settings
+from django.conf.urls.static import static  # Import static
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from shop.views import home  # Import home view
+from django.views.generic import TemplateView  # For rendering the HTML page
 
 # Swagger API Documentation
 schema_view = get_schema_view(
@@ -39,9 +42,10 @@ urlpatterns = [
     path('', home, name='home'),  # Home page
     path('admin/', admin.site.urls),
     path('api/', include('shop.urls')),  # Include app URLs
+    path('register/', TemplateView.as_view(template_name='registration.html'), name='register'),  # Register page
 
     # Swagger UI
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     # ReDoc UI
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Serve static files
