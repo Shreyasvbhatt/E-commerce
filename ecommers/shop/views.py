@@ -27,15 +27,15 @@ def register(request):
         # Validation checks
         if password != password2:
             messages.error(request, "Passwords do not match!")
-            return redirect("register")
+            return JsonResponse({"message": "password wrong"})
 
         if User.objects.filter(username=username).exists():
             messages.error(request, "Username already taken!")
-            return redirect("register")
+            return JsonResponse({"message": "User taken"})
 
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email is already in use!")
-            return redirect("register")
+            return JsonResponse({"message": "email taken"})
 
         # Create user
         user = User.objects.create_user(username=username, email=email, password=password)
